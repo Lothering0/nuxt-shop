@@ -1,0 +1,141 @@
+$main: #f2f9aa;
+$main-hover: #f7e76c;
+$primary: #f1f1f1;
+$standard: #1f1f1f;
+$danger: #dc3c3c;
+$danger-hover: #c13535;
+$secondary: #939393;
+$secondary-hover: #737373;
+$secondary-2: #d3d3d3;
+$link: #000;
+$white: #fff;
+
+.body {
+  background: $primary;
+
+  color: $standard;
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    background-color: $primary;
+  }
+
+  .collapse-navbar {
+    background: $primary;
+  }
+}
+
+a {
+  color: $link;
+}
+
+.character-type,
+.character-value {
+  color: $link;
+}
+
+.inner-burger {
+  background: $standard;
+  box-shadow: 0 -14px 0 $standard, 0 14px 0 $standard;
+}
+
+input {
+  color: $standard;
+  border-bottom: 1px solid $secondary-2 !important;
+
+  &:focus {
+    border-bottom: 1px solid $main !important;
+  }
+}
+
+.dark {
+  background: $standard;
+
+  color: $primary;
+
+  @media screen and (max-width: 320px) {
+    header {
+      background-color: $standard;
+    }
+
+    .collapse-navbar {
+      background: $standard;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  .character-type,
+  .character-value {
+    color: $white;
+  }
+
+  .inner-burger {
+    background: $primary;
+    box-shadow: 0 -14px 0 $primary, 0 14px 0 $primary;
+  }
+
+  input {
+    color: $primary;
+    border-bottom: 1px solid $secondary-2;
+
+    &:focus {
+      border-bottom: 1px solid $main;
+    }
+  }
+}
+
+// 
+.main {
+  background: $main;
+  color: $standard;
+
+  &:hover {
+    background: $main-hover;
+  }
+}
+
+.secondary {
+  background: $secondary;
+  color: $primary;
+
+  &:hover {
+    background: $secondary-hover;
+  }
+}
+
+.danger {
+  background: $danger;
+  color: $primary;
+
+  &:hover {
+    background: $danger-hover;
+  }
+}
+
+.standard-text {
+  color: $standard;
+}
+
+.secondary-text {
+  color: $secondary;
+}
+
+.primary-text {
+  color: $primary;
+}
+
+.price {
+  color: $danger;
+}
+.space-between {
+  border-bottom: 1px dotted $secondary;
+}
+
+label {
+  color: $secondary;
+  font-size: 1.25em;
+}

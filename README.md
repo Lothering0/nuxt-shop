@@ -1,6 +1,6 @@
 # Nuxt Shop
 
-Shop with front-end on [Nuxt.js](https://nuxtjs.org), SCSS and back-end on [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoose.js)).
+Shop with front-end on [Nuxt.js](https://nuxtjs.org), SCSS and back-end on [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoose.js)). [GitHub of server side](https://github.com/Lothering0/nuxt-shop-server).
 
 ## Implemented on project
 

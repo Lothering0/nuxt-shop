@@ -1,4 +1,4 @@
-const address = 'http://localhost:9000/api'
+const address = process.env.ADDRESS
 
 export const state = () => ({
   isAuth: false,
@@ -31,8 +31,6 @@ export const actions = {
         ? commit('setAuth', true)
         : commit('setAuth', false)
     } catch (e) {
-      // console.log(e.message)
-      // console.log('You are not logged in')
       commit('setAuth', false)
     }
   },

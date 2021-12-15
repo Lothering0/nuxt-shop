@@ -1,4 +1,4 @@
-const address = 'http://localhost:9000/api'
+const address = process.env.ADDRESS
 const limit = 8
 
 export const state = () => ({

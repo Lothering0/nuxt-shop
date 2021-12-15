@@ -20,7 +20,7 @@
         @load-more="fetch(page++)"
       />
     </ul>
-    <h2 class="text-danger" v-else>Posts not found!</h2>
+    <h2 v-else>Posts not found!</h2>
   </div>
 </template>
 

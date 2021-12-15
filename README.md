@@ -10,8 +10,8 @@ On back-end:
 * Creating and deleting goods (with title, price, description, image, characters and categories)
 * Adding goods to basket
 * Sort goods by nickname, categories
-* Sending comment
-* Set like/dislike to comment
+* Sending comments
+* Set like/dislike to comments
 
 On front-end:
 

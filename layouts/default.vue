@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-  width: calc(100% - 420px);
+  max-width: 1209px;
 
   margin: 0 auto;
 
@@ -232,11 +232,11 @@ button {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .container {
-    width: calc(100% - 60px);
-  }
-}
+// @media screen and (max-width: 1400px) {
+//   .container {
+//     width: calc(100% - 60px);
+//   }
+// }
 
 @media screen and (max-width: 320px) {
   body {

@@ -255,7 +255,11 @@ a,
   }
 }
 
-@media screen and (max-width: 1400px) {
+.dark {
+  background: transparent;
+}
+
+@media screen and (max-width: 1500px) {
   header, .collapse-navbar {
     transition: .7s;
   }

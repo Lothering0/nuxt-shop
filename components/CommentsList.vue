@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .comments-list {
-  width: 1018px;
+  max-width: 100%;
 
   margin: 0 auto;
   padding: 0;

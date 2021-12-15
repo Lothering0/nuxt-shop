@@ -446,4 +446,22 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .image-and-categories {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .image-and-categories {
+    max-width: 100%;
+
+    padding: 0;
+  }
+}
 </style>

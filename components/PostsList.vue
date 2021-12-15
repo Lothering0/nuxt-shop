@@ -98,6 +98,17 @@ li {
   background: #aaa;
 }
 
+@media screen and (max-width: 1300px) {
+  ul {
+    margin-left: 0;
+  }
+
+  li {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (max-width: 320px) {
   ul {
     justify-content: center;

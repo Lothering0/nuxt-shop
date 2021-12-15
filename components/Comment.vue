@@ -242,6 +242,10 @@ li {
   cursor: pointer;
 }
 
+.message {
+  padding-right: 25px;
+}
+
 .edit-buttons {
   position: absolute;
   left: -40px;
@@ -281,6 +285,7 @@ li {
 .likes-and-dislikes {
   display: flex;
   margin-left: auto;
+  margin-right: 25px;
 
   button:nth-child(1) {
     margin-right: 12px;
@@ -344,10 +349,13 @@ input, .message {
   .message {
     margin-top: 6px;
     margin-bottom: 7px;
+
+    padding-right: 0;
   }
 
   .likes-and-dislikes {
     justify-content: end;
+    margin-right: 0;
 
     button img {
       width: 14px;

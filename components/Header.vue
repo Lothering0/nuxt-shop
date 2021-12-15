@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{'dark': getDarkMode}">
     <div class="inner-header">
       <nuxt-link
         exact
@@ -33,7 +33,11 @@
         </div>
 
         <transition name="fade">
-          <ul class="collapse-navbar" v-if="toggle">
+          <ul
+            class="collapse-navbar"
+            :class="{'dark': getDarkMode}"
+            v-if="toggle"
+          >
             <li>
               <nuxt-link
                 no-prefetch
@@ -251,11 +255,31 @@ a,
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1400px) {
   header, .collapse-navbar {
     transition: .7s;
   }
 
+  header {
+    height: 90px;
+
+    background-color: $primary;
+  }
+
+  .collapse-navbar {
+    background: $primary;
+  }
+
+  header.dark {
+    background-color: $standard;
+  }
+
+  .collapse-navbar.dark {
+    background: $standard;
+  }
+}
+
+@media screen and (max-width: 320px) {
   header {
     height: 60px;
 

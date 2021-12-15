@@ -54,16 +54,6 @@ input {
 
   color: $primary;
 
-  @media screen and (max-width: 1400px) {
-    header {
-      background-color: $standard;
-    }
-
-    .collapse-navbar {
-      background: $standard;
-    }
-  }
-
   a {
     color: $white;
   }

@@ -142,7 +142,7 @@
           name="categories"
           v-model="dynamicCategory"
           @keydown="clearAlert('categories')"
-          :maxlength = "maxCategoryLength"
+          :maxlength="maxCategoryLength"
           v-else
         >
 

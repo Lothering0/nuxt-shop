@@ -1,4 +1,3 @@
-const address = process.env.ADDRESS
 const limit = 8
 
 export const state = () => ({
@@ -80,6 +79,8 @@ export const mutations = {
 
 export const actions = {
   async fetch({ commit }, page = 1) {
+    const address = this.state.env.address
+
     try {
       const posts = await this.$axios.$get(`${address}/posts?limit=${limit}&page=${page}`, {
         withCredentials: true
@@ -94,6 +95,8 @@ export const actions = {
     }
   },
   async fetchByUserId({ commit }, [id, page]) {
+    const address = this.state.env.address
+
     try {
       if (!id) id = this.state.auth.userId
       if (!page) page = 1
@@ -111,6 +114,8 @@ export const actions = {
     }
   },
   async fetchById({ commit }, id) {
+    const address = this.state.env.address
+
     try {
       const post = await this.$axios.$get(`${address}/posts/${id}`, {
         withCredentials: true
@@ -122,6 +127,8 @@ export const actions = {
     }
   },
   async fetchByCategoryName({ commit }, [name, page]) {
+    const address = this.state.env.address
+
     try {
       if (!page) page = 1
 
@@ -141,6 +148,8 @@ export const actions = {
     }
   },
   async addPost({ commit }, form) {
+    const address = this.state.env.address
+
     try {
       const newPost = await this.$axios.$post(`${address}/posts/`, form, {
         withCredentials: true
@@ -162,6 +171,8 @@ export const actions = {
     }
   },
   async deletePost({ commit }, id) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$delete(`${address}/posts/${id}`, {
         withCredentials: true
@@ -176,6 +187,8 @@ export const actions = {
     }
   },
   async updatePost({ commit }, [id, form]) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$patch(`${address}/posts/${id}`, form, {
         withCredentials: true
@@ -187,6 +200,8 @@ export const actions = {
     }
   },
   async fetchBasket({ commit }, page = 1) {
+    const address = this.state.env.address
+
     try {
       const posts = await this.$axios.$get(`${address}/posts/basket?limit=${limit}&page=${page}`, {
         withCredentials: true
@@ -201,6 +216,8 @@ export const actions = {
     }
   },
   async addToBasket({ commit }, [post_id, in_basket]) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$post(`${address}/basket`, { post_id }, {
         withCredentials: true

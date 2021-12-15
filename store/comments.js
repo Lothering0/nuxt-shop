@@ -1,4 +1,6 @@
-const address = process.env.ADDRESS
+const address = process.env === 'production'
+  ? process.env.BACKEND_ADDRESS
+  : 'http://localhost:9000/api'
 
 export const state = () => ({
   comments: []

@@ -3,6 +3,9 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
+  privateRuntimeConfig: {
+    address: process.env.BACKEND_ADDRESS
+  },
   mode: 'universal',
   /*
    ** Nuxt target

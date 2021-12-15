@@ -1,4 +1,9 @@
-const address = process.env.ADDRESS
+const address = process.env === 'production'
+  ? process.env.BACKEND_ADDRESS
+  : 'http://localhost:9000/api'
+
+// const address = this.state.env.ADDRESS
+// console.log(this.state.env)
 
 export const state = () => ({
   isAuth: false,
@@ -19,6 +24,9 @@ export const mutations = {
 }
 
 export const actions = {
+  testAction() {
+    console.log(this.state.env)
+  },
   async fetch({ commit }) {
     try {
       const response = await this.$axios.$get(`${address}/auth/user`, {

@@ -301,6 +301,7 @@ export default {
 
 .description {
   font-size: 1.3em;
+  word-wrap: break-word;
 }
 
 .price-and-button {

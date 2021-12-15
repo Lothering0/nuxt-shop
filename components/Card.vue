@@ -21,8 +21,8 @@
         }"
         :title="
           !post.in_basket
-          ? 'Add to basket'
-          : 'Remove from basket'
+            ? 'Add to basket'
+            : 'Remove from basket'
         "
         @click="addToBasket([post._id, post.in_basket])"
         v-show="showBasket || isMobile"
@@ -38,7 +38,14 @@
     </transition>
 
     <div class="info">
-      <div class="main-info" :title="post.description">
+      <div
+        class="main-info"
+        :title="
+          post.description.length > 20
+            ? post.description.slice(0, 20) + '...'
+            : post.description
+        "
+      >
         <div class="title-and-name">
           <nuxt-link
             :to="`/posts/${post._id}`"
@@ -54,7 +61,9 @@
       </div>
 
       <div class="description">
-        {{post.description}}
+        {{ post.description.length > 41
+            ? post.description.slice(0, 41) + '...'
+            : post.description }}
       </div>
 
       <div
@@ -176,7 +185,9 @@ export default {
 
 .description {
   margin: 10px 0;
+
   font-size: 1em;
+  word-wrap: break-word;
 }
 
 .categories {

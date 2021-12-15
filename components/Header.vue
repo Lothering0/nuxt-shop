@@ -165,10 +165,13 @@ $padding: 69px;
 
 header {
   position: fixed;
+  top: 0;
+
   width: 100%;
   height: 142px;
-  top: 0;
+
   pointer-events: none;
+  z-index: 3;
 }
 
 a {
@@ -256,7 +259,6 @@ a,
   header {
     height: 60px;
 
-    z-index: 3;
     pointer-events: all;
   }
 

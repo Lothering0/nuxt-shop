@@ -232,6 +232,12 @@ button {
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .container {
+    width: calc(100% - 60px);
+  }
+}
+
 @media screen and (max-width: 320px) {
   body {
     font-size: 13px;

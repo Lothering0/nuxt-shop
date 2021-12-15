@@ -7,6 +7,7 @@
         placeholder="Enter message"
         name="message"
         v-model="message"
+        :maxlength="maxLength"
         required
       >
 
@@ -24,7 +25,8 @@ export default {
   name: 'CommentForm',
   data() {
     return {
-      message: ''
+      message: '',
+      maxLength: 2000
     }
   },
   props: {

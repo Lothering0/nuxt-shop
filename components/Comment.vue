@@ -310,6 +310,8 @@ input, .message {
 .likes-and-dislikes button,
 .message {
   font-size: 1.5em;
+
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 320px) {

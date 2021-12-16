@@ -268,7 +268,7 @@ export default {
 }
 
 .post-image {
-  width: 467px;
+  max-width: 467px;
   height: 296px;
   border-radius: 3px;
 }
@@ -358,10 +358,28 @@ export default {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .image-and-categories {
+    margin: 0 auto;
+  }
+
+  .post-image {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @media screen and (max-width: 320px) {
   .image-and-categories {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+
+    padding: 0;
   }
 
   .post-image {
@@ -444,24 +462,6 @@ export default {
     h2 {
       margin-bottom: 11px;
     }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .info {
-    flex-direction: column;
-  }
-
-  .image-and-categories {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .image-and-categories {
-    max-width: 100%;
-
-    padding: 0;
   }
 }
 </style>

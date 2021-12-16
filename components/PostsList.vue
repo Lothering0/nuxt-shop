@@ -104,7 +104,6 @@ li {
   }
 
   li {
-    margin-left: auto;
     margin-right: auto;
   }
 }
@@ -118,7 +117,7 @@ li {
   }
 
   li {
-    margin-left: 0;
+    margin: 0 auto;
   }
 }
 </style>

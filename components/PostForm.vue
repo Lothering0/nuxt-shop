@@ -614,7 +614,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .inner-form {
     width: 271px;
 

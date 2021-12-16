@@ -264,7 +264,12 @@ export default {
 }
 
 .image-and-categories {
+  display: flex;
+  flex-direction: column;
+
   width: 467px;
+
+  margin: 0 auto;
 }
 
 .post-image {
@@ -362,18 +367,9 @@ export default {
   .info {
     flex-direction: column;
   }
-
-  .image-and-categories {
-    margin: 0 auto;
-  }
-
-  .post-image {
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .image-and-categories {
     display: flex;
     flex-direction: column;
@@ -419,10 +415,6 @@ export default {
     .title-and-name {
       margin-left: 8px;
     }
-  }
-
-  .image-and-categories {
-    padding: 0 19px;
   }
 
   .categories {

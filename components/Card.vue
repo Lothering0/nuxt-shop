@@ -130,8 +130,6 @@ export default {
 
       return false
     }
-    // ...mapGetters('editMode/getEditMode')
-    // ...mapGetters('editMode', ['getEditMode'], 'auth/auth')
   }
 }
 </script>

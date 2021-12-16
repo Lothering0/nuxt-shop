@@ -319,7 +319,7 @@ input, .message {
   word-wrap: break-word;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   li {
     margin-bottom: 20px;
   }

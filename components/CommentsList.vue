@@ -30,9 +30,9 @@ export default {
   padding: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .comments-list {
-    width: 300px;
+    min-width: 300px;
   }
 
   ul {

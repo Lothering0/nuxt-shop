@@ -16,6 +16,8 @@
     "form-data": "^4.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.0",
+    "sass": "^1.43.4",
+    "sass-loader": "10.1.1",
     "vue-scroll-reveal": "^1.0.11"
   },
   "devDependencies": {
@@ -23,8 +25,6 @@
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/style-resources": "^1.2.1",
     "babel-eslint": "^10.1.0",
-    "prettier": "^2.0.5",
-    "sass": "^1.43.4",
-    "sass-loader": "10.1.1"
+    "prettier": "^2.0.5"
   }
 }

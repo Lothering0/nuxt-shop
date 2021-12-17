@@ -6,7 +6,6 @@ export default {
   privateRuntimeConfig: {
     address: process.env.BACKEND_ADDRESS
   },
-  mode: 'universal',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target

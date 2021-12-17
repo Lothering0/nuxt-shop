@@ -1,10 +1,3 @@
-const address = process.env === 'production'
-  ? process.env.BACKEND_ADDRESS
-  : 'http://localhost:9000/api'
-
-// const address = this.state.env.ADDRESS
-// console.log(this.state.env)
-
 export const state = () => ({
   isAuth: false,
   username: '',
@@ -28,6 +21,8 @@ export const actions = {
     console.log(this.state.env)
   },
   async fetch({ commit }) {
+    const address = this.state.env.address
+
     try {
       const response = await this.$axios.$get(`${address}/auth/user`, {
         withCredentials: true
@@ -43,6 +38,8 @@ export const actions = {
     }
   },
   async logout({ commit }) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$post(`${address}/auth/logout`, null, {
         headers: { 'Content-Type': 'application/json' },
@@ -56,6 +53,8 @@ export const actions = {
     }
   },
   async updateInfo({ commit }, form) {
+    const address = this.state.env.address
+
     try {
       const updatedInfo = await this.$axios.$patch(`${address}/auth/update`, form, {
         withCredentials: true

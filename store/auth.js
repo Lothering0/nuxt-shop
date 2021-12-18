@@ -25,6 +25,8 @@ export const actions = {
         withCredentials: true
       })
 
+      console.log(response)
+
       commit('setUser', response)
 
       response.message !== 'Unauthorized'

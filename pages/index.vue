@@ -14,8 +14,8 @@ import { mapMutations, mapGetters } from 'vuex'
 export default {
   name: 'Container',
   async fetch({ store }) {
-    if (process.server) await store.dispatch('auth/fetch')
-    await store.dispatch('posts/fetch')
+    await store.dispatch('auth/fetch')
+    // await store.dispatch('posts/fetch')
   },
   methods: {
     ...mapMutations({

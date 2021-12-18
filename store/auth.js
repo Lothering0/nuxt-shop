@@ -33,6 +33,7 @@ export const actions = {
         ? commit('setAuth', true)
         : commit('setAuth', false)
     } catch (e) {
+      console.log(e.message)
       commit('setAuth', false)
     }
   },

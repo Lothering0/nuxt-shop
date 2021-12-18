@@ -18,7 +18,7 @@
         id="email"
         placeholder="Enter your email"
         v-model="email"
-r       :minlength="minEmailLength"
+        :minlength="minEmailLength"
         :maxlength="maxEmailLength"
         required
       >
@@ -62,14 +62,14 @@ r       :minlength="minEmailLength"
       </div>
     </div>
     <div
-      class="alert alert-danger"
+      class="danger-text"
       role="alert"
       v-if="wrongLogin"
     >
       Wrong email or password!
     </div>
     <div
-      class="alert alert-danger"
+      class="danger-text"
       role="alert"
       v-if="wrongRegister"
     >
@@ -143,3 +143,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.danger-text {
+  margin-top: 25px;
+
+  font-size: 1.2em;
+  text-align: center;
+}
+</style>

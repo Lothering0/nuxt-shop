@@ -18,7 +18,6 @@ export const mutations = {
 
 export const actions = {
   async fetch({ commit }) {
-    console.log('Try to send request')
     const address = this.state.env.address
 
     try {
@@ -26,15 +25,12 @@ export const actions = {
         withCredentials: true
       })
 
-      console.log(response)
-
       commit('setUser', response)
 
       response.message !== 'Unauthorized'
         ? commit('setAuth', true)
         : commit('setAuth', false)
     } catch (e) {
-      console.log(e.message)
       commit('setAuth', false)
     }
   },

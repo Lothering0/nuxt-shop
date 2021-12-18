@@ -188,7 +188,7 @@ export default {
   name: 'Post',
   data({ $config: { address } }) {
     return {
-      img: (address || 'http://localhost:9000/') + this.post.image,
+      img: (address.replace('/api', '') || 'http://localhost:9000/') + this.post.image,
       minPrice: 3,
 
       showEditButtons: false,

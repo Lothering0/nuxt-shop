@@ -124,7 +124,6 @@ export default {
     },
     async registration() {
       try {
-        console.log(this.address)
         await this.$axios.$post(`${this.address}/auth/register`, {
           name: this.name,
           email: this.email,

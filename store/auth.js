@@ -18,6 +18,7 @@ export const mutations = {
 
 export const actions = {
   async fetch({ commit }) {
+    console.log('Try to send request')
     const address = this.state.env.address
 
     try {

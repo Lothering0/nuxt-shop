@@ -107,7 +107,7 @@ export default {
   methods: {
     async login() {
       try {
-        await this.$axios.$post('http://localhost:9000/api/auth/login', {
+        await this.$axios.$post(`${process.env.BACKEND_ADDRESS}/auth/login`, {
           email: this.email,
           password: this.password,
         }, {
@@ -122,7 +122,7 @@ export default {
     },
     async registration() {
       try {
-        await this.$axios.$post('http://localhost:9000/api/auth/register', {
+        await this.$axios.$post(`${process.env.BACKEND_ADDRESS}/auth/register`, {
           name: this.name,
           email: this.email,
           password: this.password,

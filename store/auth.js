@@ -17,9 +17,6 @@ export const mutations = {
 }
 
 export const actions = {
-  testAction() {
-    console.log(this.state.env)
-  },
   async fetch({ commit }) {
     const address = this.state.env.address
 

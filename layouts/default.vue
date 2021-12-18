@@ -37,6 +37,11 @@ export default {
 @import url('//fonts.googleapis.com/css2?family=Molengo&display=swap');
 @import '@/assets/colors';
 
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 html {
   line-height: inherit;
 }
@@ -248,6 +253,15 @@ button {
 
     .space {
       height: 100px;
+    }
+  }
+
+  .inner-form {
+    .links-and-buttons {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0 11px;
     }
   }
 

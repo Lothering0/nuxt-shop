@@ -14,9 +14,10 @@ import { mapMutations, mapGetters } from 'vuex'
 export default {
   name: 'Container',
   async fetch({ store }) {
-    if (!store.getters['auth/auth']) {
-      await store.dispatch('auth/fetch')
-    }
+    // if (!store.getters['auth/auth']) {
+    //   await store.dispatch('auth/fetch')
+    // }
+    await store.dispatch('auth/fetch')
     await store.dispatch('posts/fetch')
   },
   methods: {

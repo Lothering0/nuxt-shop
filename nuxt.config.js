@@ -3,7 +3,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  privateRuntimeConfig: {
+  publicRuntimeConfig: {
     address: process.env.BACKEND_ADDRESS
   },
   /*

@@ -85,7 +85,7 @@ export default {
   props: {
     authType: String
   },
-  data() {
+  data({ $config: { address } }) {
     return {
       valid: false,
       showPassword: false,
@@ -101,13 +101,15 @@ export default {
       maxPasswordLength: 15,
 
       wrongLogin: false,
-      wrongRegister: false
+      wrongRegister: false,
+
+      address
     }
   },
   methods: {
     async login() {
       try {
-        await this.$axios.$post(`${address}/auth/login`, {
+        await this.$axios.$post(`${this.address}/auth/login`, {
           email: this.email,
           password: this.password,
         }, {
@@ -122,7 +124,8 @@ export default {
     },
     async registration() {
       try {
-        await this.$axios.$post(`${address}/auth/register`, {
+        console.log(this.address)
+        await this.$axios.$post(`${this.address}/auth/register`, {
           name: this.name,
           email: this.email,
           password: this.password,

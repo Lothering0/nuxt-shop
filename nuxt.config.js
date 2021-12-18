@@ -4,9 +4,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-mode
    */
   publicRuntimeConfig: {
-    address: process.env.BACKEND_ADDRESS
+    address: process.env.BACKEND_ADDRESS || 'http://localhost:9000/api'
   },
-  /*
+  /*`
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */

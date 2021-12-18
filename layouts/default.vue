@@ -33,9 +33,17 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('http://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('http://fonts.googleapis.com/css2?family=Molengo&display=swap');
 @import '@/assets/colors';
+
+@font-face {
+  font-family: 'Molengo';
+  src: url('@/static/fonts/Molengo-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('@/static/fonts/Mulish-VariableFont_wght.ttf');
+}
 
 * {
   -webkit-tap-highlight-color: transparent;
@@ -78,7 +86,6 @@ h1 {
 
   font-size: 2em;
   font-family: 'Mulish';
-  font-weight: 500;
   font-weight: 700;
   text-transform: uppercase;
 }

@@ -1,7 +1,3 @@
-const address = process.env === 'production'
-  ? process.env.BACKEND_ADDRESS
-  : 'http://localhost:9000/api'
-
 export const state = () => ({
   comments: []
 })
@@ -87,6 +83,8 @@ export const mutations = {
 
 export const actions = {
   async fetch({ commit }, id) {
+    const address = this.state.env.address
+
     try {
       const comments = await this.$axios.$get(`${address}/comments/${id}`, {
         withCredentials: true
@@ -98,6 +96,8 @@ export const actions = {
     }
   },
   async addComment({ commit }, [id, form]) {
+    const address = this.state.env.address
+
     try {
       const newComment = await this.$axios.$post(`${address}/comments/${id}`, form, {
         withCredentials: true
@@ -120,6 +120,8 @@ export const actions = {
     }
   },
   async updateComment({ commit }, [id, message]) {
+    const address = this.state.env.address
+
     try {
       const updatedComment = await this.$axios.$patch(`${address}/comments/${id}`, message, {
         withCredentials: true
@@ -131,6 +133,8 @@ export const actions = {
     }
   },
   async deleteComment({ commit }, id) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$delete(`${address}/comments/${id}`, {
         withCredentials: true
@@ -142,6 +146,8 @@ export const actions = {
     }
   },
   async setLike({ commit }, id) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$post(`${address}/likes/${id}`, null, {
         withCredentials: true
@@ -153,6 +159,8 @@ export const actions = {
     }
   },
   async setDislike({ commit }, id) {
+    const address = this.state.env.address
+
     try {
       await this.$axios.$post(`${address}/dislikes/${id}`, null, {
         withCredentials: true

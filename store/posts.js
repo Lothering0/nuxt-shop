@@ -186,7 +186,7 @@ export const actions = {
       console.log(e.message)
     }
   },
-  async updatePost({ commit }, [id, form]) {
+  async updatePost(_, [id, form]) {
     const address = this.state.env.address
 
     try {

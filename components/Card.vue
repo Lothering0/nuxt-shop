@@ -93,9 +93,9 @@ import { mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'Post',
-  data() {
+  data({ $config: { address } }) {
     return {
-      img: `http://localhost:9000/${this.post.image}`,
+      img: (address || 'http://localhost:9000/') + this.post.image,
       minPrice: 3,
 
       showBasket: false

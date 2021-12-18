@@ -22,7 +22,7 @@ export const actions = {
 
     try {
       // const response = await this.$axios.$get(`${address}/auth/user`, {
-      const response = await this.$axios.$get(`https://nuxt-shop0-server.herokuapp.com/auth/user`, {
+      const response = await this.$axios.$get(`https://nuxt-shop0-server.herokuapp.com/api/auth/user`, {
         withCredentials: true
       })
 

@@ -18,10 +18,11 @@ export const mutations = {
 
 export const actions = {
   async fetch({ commit }) {
-    const address = this.state.env.address
+    // const address = this.state.env.address
 
     try {
-      const response = await this.$axios.$get(`${address}/auth/user`, {
+      // const response = await this.$axios.$get(`${address}/auth/user`, {
+      const response = await this.$axios.$get(`https://nuxt-shop0-server.herokuapp.com/auth/user`, {
         withCredentials: true
       })
 

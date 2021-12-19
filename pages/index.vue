@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapMutations, mapGetters } from 'vuex'
 
 export default {
   name: 'Container',
@@ -24,9 +24,6 @@ export default {
       clearPosts: 'posts/clearPosts',
       switchEnough: 'posts/switchEnough',
     }),
-    ...mapActions({
-      authFetch: 'auth/fetch'
-    })
   },
   computed: {
     ...mapGetters('auth', ['auth']),
@@ -36,9 +33,6 @@ export default {
   },
   mounted() {
     if (this.getEditMode) this.switchEditMode()
-
-    // On local you can use dispatch in fetch hook instead of this
-    this.authFetch()
   },
   beforeDestroy() {
     this.clearPosts()

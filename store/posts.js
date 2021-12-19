@@ -147,7 +147,7 @@ export const actions = {
       console.log(e.message)
     }
   },
-  async addPost(_, form) {
+  async addPost({ commit }, form) {
     const address = this.state.env.address
 
     try {
@@ -164,6 +164,8 @@ export const actions = {
       newPost.user_name = name
       newPost.categories = await getCategoriesById(newPost._id)
       newPost.characters = await getCharactersById(newPost._id)
+
+      commit('addPost', newPost)
     } catch (e) {
       console.log(e.message)
     }

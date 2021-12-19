@@ -164,8 +164,6 @@ export const actions = {
       newPost.user_name = name
       newPost.categories = await getCategoriesById(newPost._id)
       newPost.characters = await getCharactersById(newPost._id)
-
-      commit('addPost', newPost)
     } catch (e) {
       console.log(e.message)
     }

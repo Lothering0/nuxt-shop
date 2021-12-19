@@ -79,6 +79,8 @@ export default {
 ul {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
+  float: left;
 
   margin: 0;
   margin-top: 49px;

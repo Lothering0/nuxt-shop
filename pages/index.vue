@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
+import { mapMutations, mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'Container',
@@ -23,9 +23,12 @@ export default {
       switchEditMode: 'editMode/switchEditMode',
       clearPosts: 'posts/clearPosts',
       switchEnough: 'posts/switchEnough',
-      setUser: 'auth/setUser',
-      setAuth: 'auth/setAuth'
+      // setUser: 'auth/setUser',
+      // setAuth: 'auth/setAuth'
     }),
+    ...mapActions({
+      authFetch: 'auth/fetch'
+    })
   },
   computed: {
     ...mapGetters('auth', ['auth']),
@@ -33,22 +36,24 @@ export default {
       return this.$store.getters['editMode/getEditMode']
     },
   },
-  async mounted() {
+  mounted() {
     if (this.getEditMode) this.switchEditMode()
 
-    try {
-      const response = await this.$axios.$get(`http://localhost:9000/api/auth/user`, {
-        withCredentials: true
-      })
+    this.authFetch()
 
-      this.setUser(response)
+    // try {
+    //   const response = await this.$axios.$get(`http://localhost:9000/api/auth/user`, {
+    //     withCredentials: true
+    //   })
 
-      response.message !== 'Unauthorized'
-        ? this.setAuth(true)
-        : this.setAuth(false)
-    } catch (e) {
-      this.setAuth(false)
-    }
+    //   this.setUser(response)
+
+    //   response.message !== 'Unauthorized'
+    //     ? this.setAuth(true)
+    //     : this.setAuth(false)
+    // } catch (e) {
+    //   this.setAuth(false)
+    // }
   },
   beforeDestroy() {
     this.clearPosts()

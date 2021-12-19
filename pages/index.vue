@@ -37,6 +37,7 @@ export default {
   mounted() {
     if (this.getEditMode) this.switchEditMode()
 
+    // On local you can use dispatch in fetch hook instead of this
     this.authFetch()
   },
   beforeDestroy() {

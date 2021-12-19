@@ -23,8 +23,6 @@ export default {
       switchEditMode: 'editMode/switchEditMode',
       clearPosts: 'posts/clearPosts',
       switchEnough: 'posts/switchEnough',
-      // setUser: 'auth/setUser',
-      // setAuth: 'auth/setAuth'
     }),
     ...mapActions({
       authFetch: 'auth/fetch'
@@ -40,20 +38,6 @@ export default {
     if (this.getEditMode) this.switchEditMode()
 
     this.authFetch()
-
-    // try {
-    //   const response = await this.$axios.$get(`http://localhost:9000/api/auth/user`, {
-    //     withCredentials: true
-    //   })
-
-    //   this.setUser(response)
-
-    //   response.message !== 'Unauthorized'
-    //     ? this.setAuth(true)
-    //     : this.setAuth(false)
-    // } catch (e) {
-    //   this.setAuth(false)
-    // }
   },
   beforeDestroy() {
     this.clearPosts()

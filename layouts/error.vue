@@ -6,6 +6,23 @@
   </section>
 </template>
 
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions({
+      authFetch: 'auth/fetch'
+    })
+  },
+  mounted() {
+    // On local you can use dispatch in fetch hook instead of this
+    this.authFetch()
+  }
+}
+</script>
+
+
 <style scoped>
 section {
   width: 600px;

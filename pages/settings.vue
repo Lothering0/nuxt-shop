@@ -99,11 +99,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-// .buttons {
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-// }
-</style>

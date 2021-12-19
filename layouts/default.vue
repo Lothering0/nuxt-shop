@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Header from '../components/Header.vue'
 
 export default {
@@ -26,8 +26,17 @@ export default {
       userInfo: {}
     }
   },
+  methods: {
+    ...mapActions({
+      authFetch: 'auth/fetch'
+    })
+  },
   computed: {
     ...mapGetters('editMode', ['getDarkMode'])
+  },
+  mounted() {
+    // On local you can use dispatch in fetch hook instead of this
+    this.authFetch()
   }
 }
 </script>

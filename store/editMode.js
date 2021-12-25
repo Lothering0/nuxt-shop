@@ -9,6 +9,10 @@ export const mutations = {
   },
   switchDarkMode(state) {
     state.darkMode = !state.darkMode
+    localStorage.setItem('dark_mode', state.darkMode)
+  },
+  setTheme(state, value) {
+    state.darkMode = value
   }
 }
 

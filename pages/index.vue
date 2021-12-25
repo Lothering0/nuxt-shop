@@ -21,6 +21,7 @@ export default {
   methods: {
     ...mapMutations({
       switchEditMode: 'editMode/switchEditMode',
+      setTheme: 'editMode/setTheme',
       clearPosts: 'posts/clearPosts',
       switchEnough: 'posts/switchEnough',
     }),
@@ -33,6 +34,10 @@ export default {
   },
   mounted() {
     if (this.getEditMode) this.switchEditMode()
+
+    const isDarkMode = localStorage.getItem('dark_mode') === 'true'
+
+    this.setTheme(isDarkMode)
   },
   beforeDestroy() {
     this.clearPosts()

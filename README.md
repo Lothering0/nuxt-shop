@@ -1,6 +1,6 @@
 # Nuxt Shop
 
-Shop with front-end on [Nuxt.js](https://nuxtjs.org), [SCSS](https://sass-lang.com) and back-end on [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoose.js)). [GitHub of server side](https://github.com/Lothering0/nuxt-shop-server).
+Shop with front-end on [Nuxt.js](https://nuxtjs.org), [SCSS](https://sass-lang.com) and back-end on [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoosejs.com)). [GitHub of server side](https://github.com/Lothering0/nuxt-shop-server).
 
 ## Implemented on project
 
@@ -33,7 +33,7 @@ On front-end:
 On back-end:
 
 * [Express 4](https://expressjs.com)
-* [MongoDB](https://mongoose.js) ([Mongoose](https://mongoose.js))
+* [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoosejs.com))
 * [bcrypt](https://www.npmjs.com/package/bcrypt)
 * [cookie-parser](https://www.npmjs.com/package/bcrypt)
 * [cors](https://www.npmjs.com/package/cors)

@@ -1,6 +1,6 @@
 # Nuxt Shop
 
-<sup>[Go to page on Heroku](https://nuxt-shop0.herokuapp.com/), [see project on Figma](https://www.figma.com/file/8iFDY0q7vOOdhPWl5tYo2Z/Shop-Project?node-id=0%3A1)</sup>
+[<sup>Go to page on Heroku</sup>](https://nuxt-shop0.herokuapp.com/)<sup>, </sup>[<sup>see project on Figma</sup>](https://www.figma.com/file/8iFDY0q7vOOdhPWl5tYo2Z/Shop-Project?node-id=0%3A1)
 
 Shop with front-end on [Nuxt.js](https://nuxtjs.org), [SCSS](https://sass-lang.com) and back-end on [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoosejs.com)). [GitHub of server side](https://github.com/Lothering0/nuxt-shop-server).
 

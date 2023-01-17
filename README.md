@@ -1,6 +1,6 @@
 # Nuxt Shop
 
-[<sup>Go to page on Vercel</sup>](https://vercel.com/lothering0/nuxt-shop/Gnj1BA4GgvXuKwP4p2c9hfYicwK3)<sup>, </sup>[<sup>see project on Figma</sup>](https://www.figma.com/file/8iFDY0q7vOOdhPWl5tYo2Z/Shop-Project?node-id=0%3A1)
+[<sup>Go to page on Vercel</sup>](https://nuxt-shop-4e696215a-lothering0.vercel.app/)<sup>, </sup>[<sup>see project on Figma</sup>](https://www.figma.com/file/8iFDY0q7vOOdhPWl5tYo2Z/Shop-Project?node-id=0%3A1)
 
 Shop with front-end on [Nuxt.js](https://nuxtjs.org), [SCSS](https://sass-lang.com) and back-end on [Express](https://expressjs.com), [MongoDB](https://www.mongodb.com) ([Mongoose](https://mongoosejs.com)). [GitHub of server side](https://github.com/Lothering0/nuxt-shop-server).
 

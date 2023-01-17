@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue ."
+    "dev": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" nuxt",
+    "build": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" nuxt build",
+    "start": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" nuxt start",
+    "generate": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" nuxt generate",
+    "lint": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" eslint --ext .js,.vue ."
   },
   "dependencies": {
     "@forked-prs/nuxt-infinite-scroll-module": "^1.0.2",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/composition-api": "^0.27.0",
+    "cross-env": "^7.0.3",
     "form-data": "^4.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.0",
